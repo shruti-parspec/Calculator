@@ -1,5 +1,4 @@
-# calculator.py
-# Python 3.14.3
+"""Command-line calculator with arithmetic operations and interactive menu."""
 
 def add(a, b):
     return a + b
