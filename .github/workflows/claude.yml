@@ -43,4 +43,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Pin the base model (drops the [1m] 1M-context beta variant, which a
           # fresh org may not have access to) and cap turns per invocation.
-          claude_args: "--model claude-haiku-4-5 --max-turns 15"
+          # Allow Bash so Claude can run git/gh (needed to open a PR). The editing
+          # tools are listed too so this works whether the flag merges with or
+          # replaces the action's defaults.
+          claude_args: "--model claude-haiku-4-5 --max-turns 15 --allowedTools Edit,Write,Read,Glob,Grep,Bash,mcp__github_comment__update_claude_comment"
