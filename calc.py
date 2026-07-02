@@ -1,5 +1,8 @@
-# calculator.py
-# Python 3.14.3
+"""A simple command-line calculator with basic arithmetic operations.
+
+Provides functions for addition, subtraction, multiplication, division, power,
+and modulus, with an interactive menu-driven interface.
+"""
 
 def add(a, b):
     return a + b
