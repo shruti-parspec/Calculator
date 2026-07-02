@@ -41,5 +41,6 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Cost / blast-radius cap per invocation.
-          claude_args: "--max-turns 15"
+          # Pin the base model (drops the [1m] 1M-context beta variant, which a
+          # fresh org may not have access to) and cap turns per invocation.
+          claude_args: "--model claude-opus-4-8 --max-turns 15"
