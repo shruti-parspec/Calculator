@@ -18,6 +18,7 @@ permissions:
   pull-requests: write
   issues: write
   actions: read
+  id-token: write   # required: the action mints an OIDC token to authenticate as the GitHub App
 
 jobs:
   claude:
